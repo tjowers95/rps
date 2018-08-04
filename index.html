@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+<script>
+function game(gl){
+  var w = 0;
+  var l = 0;
+  while(w < gl || l < gl){
+    p = prompt("Rock, Paper, Scissors");
+    if(p.toUpperCase() == "ROCK"){
+      u = 0;
+    } else if(p.toUpperCase()=="PAPER"){
+      u = 1;
+    } else {
+      u = 2;
+    }
+    c = Math.round(Math.random()*3);
+    
+      if (u == c+1 || u == c-2){
+        w++;
+      console.log("Win");  
+    }   else if(u == c){
+      console.log("Draw");
+    } else {
+      l++;
+      console.log("Loss")
+    }
+    if (w==gl){
+      return "won";
+    }
+    if (l==gl){
+      return "lost";
+    }
+  }
+  
+  
+}game(3);
+
+</script>
+</body>
+
+
+
+
+
+
+</html>
+
